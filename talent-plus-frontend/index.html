@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <title>TALENT PLUS</title>
+</head>
+<body style="height:100vh;width:100vh; background-color:#bbb;color:#222; display: flex; justify-content: center; align-items: center;">
+    <h1 style="font-family: Helvetica, sans-serif ;">Sever says <span id="api_dat"></span> 🚀🚀</h1>
+    <script>
+        const url="http://localhost:3000"
+        fetch(url).
+        then(res=>res.text())
+        .then(data=>{
+            document.querySelector('#api_dat').innerHTML=data
+        })
+        .catch(err => console.error(`Opps an error occured ${err}`))
+    </script>
+</body>
+</html>
